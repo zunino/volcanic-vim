@@ -49,44 +49,50 @@ function s:erupt(group, fg, ...)
     exe l:hicmd
 endfunction
 
-call s:erupt('Normal',       s:volcanic_fg, {"bg":s:volcanic_bg})
+call s:erupt('Normal', s:volcanic_fg, {"bg":s:volcanic_bg})
 
-call s:erupt('Directory',    s:volcanic_ash, {'attr':'bold'})
-call s:erupt('Title',        s:volcanic_blaze, {'attr':'bold'})
+call s:erupt('Directory', s:volcanic_ash, {'attr':'bold'})
+call s:erupt('Title', s:volcanic_blaze, {'attr':'bold'})
 
-call s:erupt('Comment',      s:volcanic_ash)
-call s:erupt('Constant',     s:volcanic_blaze, {"attr":"bold"})
-call s:erupt('Identifier',   s:volcanic_light_ash, {'attr':'bold'})
-call s:erupt('Statement',    s:volcanic_ash, {"attr":"bold"})
-call s:erupt('PreProc',      s:volcanic_ash, {'attr':'bold'})
-call s:erupt('Type',         s:volcanic_lava, {"attr":"bold"})
-call s:erupt('Special',      s:volcanic_lava, {"attr":"bold"})
-call s:erupt('Underlined',   s:volcanic_lava, {"attr":"bold"})
+call s:erupt('Comment', s:volcanic_ash)
+call s:erupt('Constant', s:volcanic_blaze, {"attr":"bold"})
+call s:erupt('Identifier', s:volcanic_light_ash, {'attr':'bold'})
+call s:erupt('Statement', s:volcanic_ash, {"attr":"bold"})
+call s:erupt('PreProc', s:volcanic_ash, {'attr':'bold'})
+call s:erupt('Type', s:volcanic_lava, {"attr":"bold"})
+call s:erupt('Special', s:volcanic_lava, {"attr":"bold"})
+call s:erupt('Underlined', s:volcanic_lava, {"attr":"bold"})
 
-call s:erupt('NonText',      s:volcanic_dark_ash)
-call s:erupt('LineNr',       s:volcanic_ash)
-call s:erupt('Visual',       'NONE', {"bg":s:volcanic_dark_ash})
-call s:erupt('Search',       s:volcanic_dark_ash, {'bg':s:volcanic_blaze})
-call s:erupt('IncSearch',    s:volcanic_dark_ash, {'bg':s:volcanic_blaze})
-call s:erupt('CursorLine',   'NONE', {'bg':s:volcanic_dark_ash, 'attr':'bold'})
+call s:erupt('NonText', s:volcanic_dark_ash)
+call s:erupt('LineNr', s:volcanic_ash)
+call s:erupt('Visual', 'NONE', {"bg":s:volcanic_dark_ash})
+call s:erupt('Search', s:volcanic_dark_ash, {'bg':s:volcanic_blaze})
+call s:erupt('IncSearch', s:volcanic_dark_ash, {'bg':s:volcanic_blaze})
+call s:erupt('CursorLine', 'NONE', {'bg':s:volcanic_dark_ash, 'attr':'bold'})
 call s:erupt('CursorColumn', 'NONE', {'bg':s:volcanic_dark_ash})
-call s:erupt('Pmenu',        s:volcanic_lava, {'bg':s:volcanic_dark_ash,'attr':'bold'})
-call s:erupt('PmenuSel',     s:volcanic_dark_ash, {'bg':s:volcanic_blaze,'attr':'bold'})
+call s:erupt('Pmenu', s:volcanic_lava, {'bg':s:volcanic_dark_ash, 'attr':'bold'})
+call s:erupt('PmenuSel', s:volcanic_dark_ash, {'bg':s:volcanic_blaze, 'attr':'bold'})
 
 " Language-specific highlights
 
 " Golang
-call s:erupt('goBuiltins',   s:volcanic_lava, {"attr":"bold"})
+call s:erupt('goBuiltins', s:volcanic_lava, {"attr":"bold"})
 
 " HTML/Markdown
-call s:erupt('htmlH1',       s:volcanic_blaze, {'attr':'bold'})
-call s:erupt('htmlH2',       s:volcanic_blaze, {'attr':'bold'})
-call s:erupt('htmlH3',       s:volcanic_blaze, {'attr':'bold'})
-call s:erupt('htmlH4',       s:volcanic_blaze, {'attr':'bold'})
-call s:erupt('htmlH5',       s:volcanic_blaze, {'attr':'bold'})
-call s:erupt('htmlH6',       s:volcanic_blaze, {'attr':'bold'})
+call s:erupt('htmlH1', s:volcanic_blaze, {'attr':'bold'})
+call s:erupt('htmlH2', s:volcanic_blaze, {'attr':'bold'})
+call s:erupt('htmlH3', s:volcanic_blaze, {'attr':'bold'})
+call s:erupt('htmlH4', s:volcanic_blaze, {'attr':'bold'})
+call s:erupt('htmlH5', s:volcanic_blaze, {'attr':'bold'})
+call s:erupt('htmlH6', s:volcanic_blaze, {'attr':'bold'})
 
 " Plugin-specific highlights
 
 " NERDTree
 call s:erupt('NERDTreeFile', s:volcanic_ash, {'bg':'NONE'})
+
+" Lightline
+"call s:erupt('LightLineLeft_normal_0', s:volcanic_dark_ash, {'bg':s:volcanic_lava, 'attr':'bold'})
+"call s:erupt('LightLineLeft_command_0', s:volcanic_dark_ash, {'bg':s:volcanic_lava, 'attr':'bold'})
+"call s:erupt('LightLineLeft_insert_0', s:volcanic_bg, {'bg':s:volcanic_blaze, 'attr':'bold'})
+
